@@ -5,7 +5,7 @@ import ParallaxImage from "./stepsImages/parallaxImage";
 import GetStartedButton from "./common/button";
 
 const CTASection = () => {
-  console.log("updated");
+  console.log("updated2");
   return (
     <section className="py-6 relative">
       <div className="container mx-auto px-6">

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import logo from "/public/icons/Group.svg";
 
 const navItems = [
   { label: "Home", hasDropdown: false },
@@ -70,7 +71,7 @@ const Header = () => {
             {/* Logo */}
             <div></div>
             <div className="flex items-center gap-2 ml-10">
-              <img src="/public/Group.svg" />
+              <img src={logo} />
             </div>
 
             {/* Navigation */}
