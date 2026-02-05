@@ -20,12 +20,12 @@ const footerLinks = {
       {
         label: "YouTube",
         href: "https://youtube.com",
-        icon: "/src/assets/youtube-logo.svg",
+        icon: "/public/assets/youtube-logo.svg",
       },
       {
         label: "LinkedIn",
         href: "https://linkedin.com",
-        icon: "/src/assets/linkedin-logo.svg",
+        icon: "/public/assets/linkedin-logo.svg",
       },
     ],
   },
