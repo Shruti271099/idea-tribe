@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroIllustration from "@/assets/hero-illustration.svg";
+import heroIllustration from "/public/assets/hero-illustration.svg";
 import GetStartedButton from "@/components/common/button";
 
 const HeroSection = () => {

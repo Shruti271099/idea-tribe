@@ -39,8 +39,8 @@ const StepCard = ({
 
       {/* Image Side */}
       <div className="flex-1 w-full">
-        <div className="bg-secondary/50 rounded-xl aspect-video flex items-center justify-center border border-border">
-          <ParallaxImage imagePlaceholder={imagePlaceholder} title={title} />
+        <div className=" rounded-xl aspect-video flex items-center justify-center ">
+          <ParallaxImage mode="image" src={imagePlaceholder} speed={0.2} />
         </div>
         <div className="space-y-2">
           <div>
@@ -63,7 +63,7 @@ const StepsSection = () => {
       title: "Build",
       subtitle: "Identify Your ",
       subtitle2: "Cybersecurity Skills",
-      imagePlaceholder: "/src/assets/step1.png",
+      imagePlaceholder: "/public/assets/step1.png",
       description:
         "Build a personalized, role-ready Skill Map in just 15 minutes. Designed for fresh graduates and experienced professionals alike. Start now.",
     },
@@ -72,7 +72,7 @@ const StepsSection = () => {
       title: "Validate",
       subtitle: "Validate to",
       subtitle2: "Conquer",
-      imagePlaceholder: "/src/assets/step2.png",
+      imagePlaceholder: "/public/assets/step2.png",
       description:
         "Strengthen your skills and confidence with our curated modules. Watch work videos and take sample quizzes to prepare for the challenges to come. Practice everything we offer, tailored to your needs.",
     },
@@ -81,7 +81,7 @@ const StepsSection = () => {
       title: "Grow",
       subtitle: "Unleash",
       subtitle2: "Your Potential",
-      imagePlaceholder: "/src/assets/step3.png",
+      imagePlaceholder: "/public/assets/step3.png",
       description:
         "Get personalized recommendations to help you go beyond and start to accelerate. Digital credentials can help you boost your cybersecurity career prospects.",
     },

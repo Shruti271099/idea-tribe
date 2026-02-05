@@ -1,33 +1,53 @@
 import { useEffect, useRef } from "react";
 
-const ParallaxImage = ({ imagePlaceholder, title }) => {
-  const imgRef = useRef(null);
+const ParallaxImage = ({
+  src,
+  alt = "",
+  mode = "image",
+  speed = 0.25,
+  children,
+}) => {
+  const ref = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!imgRef.current) return;
+      if (!ref.current) return;
 
-      const rect = imgRef.current.getBoundingClientRect();
-      const speed = 0.2;
+      const rect = ref.current.getBoundingClientRect();
       const offset = rect.top * speed;
 
-      imgRef.current.style.transform = `translateY(${offset}px)`;
+      ref.current.style.transform = `translateY(${offset}px)`;
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    handleScroll();
 
-  return (
-    <div className="overflow-hidden bg-secondary/50 rounded-xl aspect-video border border-border">
-      {imagePlaceholder && (
-        <img
-          ref={imgRef}
-          src={imagePlaceholder}
-          alt={title}
-          className="w-full h-[110%] object-cover transition-transform duration-75 ease-out"
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [speed]);
+
+  // For background style usage
+  if (mode === "background") {
+    return (
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div
+          ref={ref}
+          style={{ backgroundImage: `url(${src})` }}
+          className="w-full h-[120%] bg-cover bg-center will-change-transform"
         />
-      )}
+        {children}
+      </div>
+    );
+  }
+
+  // For normal <img> usage
+  return (
+    <div className="overflow-hidden">
+      <img
+        ref={ref}
+        src={src}
+        alt={alt}
+        className="w-full h-[110%] object-cover will-change-transform"
+      />
     </div>
   );
 };
