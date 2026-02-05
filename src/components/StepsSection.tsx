@@ -1,4 +1,8 @@
 import ParallaxImage from "@/components/stepsImages/parallaxImage";
+import Step1Image from "/public/assets/step1.png";
+import Step2mage from "/public/assets/step2.png";
+import Step3Image from "/public/assets/step3.png";
+
 interface StepCardProps {
   stepNumber: string;
   title: string;
@@ -63,7 +67,7 @@ const StepsSection = () => {
       title: "Build",
       subtitle: "Identify Your ",
       subtitle2: "Cybersecurity Skills",
-      imagePlaceholder: "/public/assets/step1.png",
+      imagePlaceholder: Step1Image,
       description:
         "Build a personalized, role-ready Skill Map in just 15 minutes. Designed for fresh graduates and experienced professionals alike. Start now.",
     },
@@ -72,7 +76,7 @@ const StepsSection = () => {
       title: "Validate",
       subtitle: "Validate to",
       subtitle2: "Conquer",
-      imagePlaceholder: "/public/assets/step2.png",
+      imagePlaceholder: Step2mage,
       description:
         "Strengthen your skills and confidence with our curated modules. Watch work videos and take sample quizzes to prepare for the challenges to come. Practice everything we offer, tailored to your needs.",
     },
@@ -81,7 +85,7 @@ const StepsSection = () => {
       title: "Grow",
       subtitle: "Unleash",
       subtitle2: "Your Potential",
-      imagePlaceholder: "/public/assets/step3.png",
+      imagePlaceholder: Step3Image,
       description:
         "Get personalized recommendations to help you go beyond and start to accelerate. Digital credentials can help you boost your cybersecurity career prospects.",
     },
