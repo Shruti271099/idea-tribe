@@ -11,7 +11,7 @@ const CTASection = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[200px] bg-primary/10 rounded-full blur-[100px]" />
           </div>
 
-          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-6">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center md:text-left">
               Join us on a journey to excellence
             </h2>

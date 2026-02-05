@@ -2,16 +2,36 @@ import { Facebook, Twitter, Linkedin, Youtube, Instagram } from "lucide-react";
 
 const footerLinks = {
   about: {
-    title: "About Skilltastic",
-    links: ["About Us", "Terms of Use", "Privacy Policy", "Cookie Policy"],
+    title: "Quick Navigation",
+    links: [
+      "Home",
+      "About",
+      "Membership",
+      "Contact",
+      "Terms and Conditions",
+      "Privacy Policy",
+      "Cancellation and Refund",
+      "Shipping and Exchange ",
+    ],
   },
-  learn: {
-    title: "Learn and Develop",
-    links: ["Pathways", "Cyberlab", "Mentorship"],
+  socialMedia: {
+    title: "Stay Connected",
+    items: [
+      {
+        label: "YouTube",
+        href: "https://youtube.com",
+        icon: "/src/assets/youtube-logo.svg",
+      },
+      {
+        label: "LinkedIn",
+        href: "https://linkedin.com",
+        icon: "/src/assets/linkedin-logo.svg",
+      },
+    ],
   },
   getInTouch: {
     title: "Get In Touch",
-    links: ["Contact Us", "Press Queries"],
+    links: ["team@gcaforum.com", `Phone No. +91 8910392803`],
   },
 };
 
@@ -25,11 +45,11 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="py-16 border-t border-border">
+    <footer className="p-16 border-t border-border">
       <div className="container mx-auto px-6">
         {/* Powered by */}
-        <div className="text-center mb-12">
-          <p className="text-sm text-muted-foreground">
+        <div className="text-center mb-20 from-neutral-100">
+          <p className="text-4xl">
             Powered by{" "}
             <span className="text-foreground font-semibold">IdeaTribe</span>
           </p>
@@ -39,26 +59,7 @@ const Footer = () => {
           {/* Logo Section */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">
-                  GCA
-                </span>
-              </div>
-              <span className="font-bold text-lg text-foreground">
-                GCATs<span className="text-primary">kills</span>
-              </span>
-            </div>
-            {/* Social Links */}
-            <div className="flex items-center gap-3 pt-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors"
-                >
-                  <social.icon className="w-4 h-4" />
-                </a>
-              ))}
+              <img src="/public/Group.svg" />
             </div>
           </div>
 
@@ -84,16 +85,17 @@ const Footer = () => {
           {/* Learn Links */}
           <div>
             <h4 className="font-semibold text-foreground mb-4">
-              {footerLinks.learn.title}
+              {footerLinks.socialMedia.title}
             </h4>
             <ul className="space-y-2">
-              {footerLinks.learn.links.map((link) => (
-                <li key={link}>
+              {footerLinks.socialMedia.items.map(({ label, href, icon }) => (
+                <li key={label}>
                   <a
-                    href="#"
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    href={href}
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    {link}
+                    <img src={icon} className="w-4 h-4 " />
+                    {label}
                   </a>
                 </li>
               ))}
@@ -123,7 +125,8 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} GCATskills. All rights reserved.
+            © {new Date().getFullYear()} Global Cybersecurity Association. All
+            Rights Reserved.
           </p>
         </div>
       </div>

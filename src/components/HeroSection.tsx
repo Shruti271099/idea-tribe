@@ -14,14 +14,14 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full border border-border mb-8 animate-fade-in">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full border border-border mb-8 animate-fade-in">
             <span className="text-xs font-medium text-muted-foreground">
               Part of the GCA Initiative to drive change
             </span>
-          </div>
+          </div> */}
 
           {/* Main Heading */}
-          <div className="flex gap-20 ">
+          <div className="flex gap-20 py-20 ">
             <div className="text-end flex flex-col  justify-center align-bottom py-20  ">
               <h1
                 className="  text-5xl md:text-7xl font-extrabold text-foreground mb-4 animate-fade-in"
@@ -54,12 +54,11 @@ const HeroSection = () => {
           </div>
           {/* Subheading */}
           <p
-            className="text-xl md:text-2xl text-foreground font-semibold mb-4 animate-fade-in"
+            className="w-full text-2xl md:text-[42px] p-16 text-foreground font-semibold mb-4 animate-fade-in"
             style={{ animationDelay: "0.3s" }}
           >
             Three steps. A million possibilities.
           </p>
-
         </div>
       </div>
     </section>

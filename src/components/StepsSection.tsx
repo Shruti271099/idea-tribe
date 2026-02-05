@@ -5,12 +5,14 @@ interface StepCardProps {
   description: string;
   imagePlaceholder?: string;
   reverse?: boolean;
+  subtitle2: string;
 }
 
 const StepCard = ({
   stepNumber,
   title,
   subtitle,
+  subtitle2,
   description,
   imagePlaceholder,
   reverse,
@@ -22,13 +24,15 @@ const StepCard = ({
       } gap-6 items-center`}
     >
       {/* Content Side */}
-      <div className="flex-1 space-y-4">
-        <div className="flex flex-col items-baseline gap-4">
-          <span className="text-8xl md:text-6xl font-extrabold text-foreground">
+      <div className="px-14 space-y-4 h-full">
+        <div className="flex flex-col items-center justify-between gap-14">
+          <span className="text-2xl md:text-[156px]  text-foreground">
             {stepNumber}
           </span>
 
-          <h3 className="text-2xl font-bold text-foreground">{title}</h3>
+          <h3 className="text-8xl md:[84px] font-extrabold text-foreground">
+            {title}
+          </h3>
         </div>
       </div>
 
@@ -46,10 +50,13 @@ const StepCard = ({
           )}
         </div>
         <div className="space-y-2">
-          <h4 className=" font-semibold">{subtitle}</h4>
-          <p className="text-muted-foreground text-sm leading-relaxed">
-            {description}
-          </p>
+          <div>
+            {" "}
+            <h4 className="text-2xl">{subtitle}</h4>
+            <h4 className="text-2xl font-bold">{subtitle2}</h4>
+          </div>
+
+          <p className=" text-md leading-relaxed">{description}</p>
         </div>
       </div>
     </div>
@@ -61,15 +68,17 @@ const StepsSection = () => {
     {
       stepNumber: "01",
       title: "Build",
-      subtitle: "Identify Your Cybersecurity Skills",
+      subtitle: "Identify Your ",
+      subtitle2: "Cybersecurity Skills",
       imagePlaceholder: "/src/assets/step1.png",
       description:
-        "Seek role clarity: Determine your ideal IT security role in just 10 minutes. Discover the best guidance and courses that cyber-school.com offers. Start now.",
+        "Build a personalized, role-ready Skill Map in just 15 minutes. Designed for fresh graduates and experienced professionals alike. Start now.",
     },
     {
       stepNumber: "02",
       title: "Validate",
-      subtitle: "Validate to Conquer",
+      subtitle: "Validate to",
+      subtitle2: "Conquer",
       imagePlaceholder: "/src/assets/step2.png",
       description:
         "Strengthen your skills and confidence with our curated modules. Watch work videos and take sample quizzes to prepare for the challenges to come. Practice everything we offer, tailored to your needs.",
@@ -77,7 +86,8 @@ const StepsSection = () => {
     {
       stepNumber: "03",
       title: "Grow",
-      subtitle: "Unleash your Potential",
+      subtitle: "Unleash",
+      subtitle2: "Your Potential",
       imagePlaceholder: "/src/assets/step3.png",
       description:
         "Get personalized recommendations to help you go beyond and start to accelerate. Digital credentials can help you boost your cybersecurity career prospects.",
