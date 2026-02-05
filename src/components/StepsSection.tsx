@@ -1,3 +1,4 @@
+import ParallaxImage from "@/components/stepsImages/parallaxImage";
 interface StepCardProps {
   stepNumber: string;
   title: string;
@@ -39,15 +40,7 @@ const StepCard = ({
       {/* Image Side */}
       <div className="flex-1 w-full">
         <div className="bg-secondary/50 rounded-xl aspect-video flex items-center justify-center border border-border">
-          {imagePlaceholder ? (
-            <img
-              src={imagePlaceholder}
-              alt={title}
-              className="w-full h-full object-cover rounded-xl"
-            />
-          ) : (
-            <div className="w-full h-full bg-gradient-to-br from-secondary to-background rounded-xl" />
-          )}
+          <ParallaxImage imagePlaceholder={imagePlaceholder} title={title} />
         </div>
         <div className="space-y-2">
           <div>

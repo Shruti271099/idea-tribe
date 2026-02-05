@@ -38,7 +38,7 @@ const HeroSection = () => {
               <GetStartedButton />
             </div>
             {/* Hero Illustration */}
-            <div className="relative w-full max-w-md my-8 ">
+            <div className="relative w-full max-w-md my-8 animate-fade-in">
               <img
                 src={heroIllustration}
                 alt="Diverse team working on cybersecurity"
@@ -53,12 +53,6 @@ const HeroSection = () => {
             </div>
           </div>
           {/* Subheading */}
-          <p
-            className="w-full text-2xl md:text-[42px] p-16 text-foreground font-semibold mb-4 animate-fade-in"
-            style={{ animationDelay: "0.3s" }}
-          >
-            Three steps. A million possibilities.
-          </p>
         </div>
       </div>
     </section>
