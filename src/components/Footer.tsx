@@ -1,6 +1,7 @@
 import { Facebook, Twitter, Linkedin, Youtube, Instagram } from "lucide-react";
 import YoutubeImage from "/public/assets/youtube-logo.svg";
 import LinkedInImage from "/public/assets/linkedin-logo.svg";
+import logo from "/public/icons/Group.svg";
 const footerLinks = {
   about: {
     title: "Quick Navigation",
@@ -60,7 +61,7 @@ const Footer = () => {
           {/* Logo Section */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <img src="/public/icons/Group.svg" />
+              <img src={logo} />
             </div>
           </div>
 

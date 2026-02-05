@@ -13,7 +13,7 @@ const CTASection = () => {
           {/* Background glow */}
           <div className="absolute inset-0 overflow-hidden">
             {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[500px] bg-primary/10 rounded-full blur-[100px]" /> */}
-            <ParallaxImage mode="background" src={bgImg} speed={0.25} />
+            <ParallaxImage mode="background" src={bgImg} speed={0.5} />
           </div>
 
           <div
@@ -25,11 +25,11 @@ h-[240px] md:h-[200px]  text-center"
             }}
           >
             <div className="md:col-span-3  flex items-center justify-center">
-              <h2 className="text-2xl md:text-3xl font-bold text-white text-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-white text-center animate-grow">
                 Join us on a journey to excellence
               </h2>
             </div>
-            <div className="md:col-span-2 flex items-start pr-[100px]">
+            <div className="md:col-span-2 flex items-start pr-[100px] animate-grow">
               <GetStartedButton />
             </div>
           </div>
